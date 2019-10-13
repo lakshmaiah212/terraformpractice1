@@ -19,7 +19,7 @@ resource "aws_security_group" "mariadb-dev-sg" {
     from_port = 3306
     to_port = 3306
     protocol = "TCP"
-    cidr = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
