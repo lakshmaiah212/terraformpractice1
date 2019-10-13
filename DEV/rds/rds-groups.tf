@@ -1,6 +1,6 @@
 resource "aws_db_subnet_group" "mariadb-subnet-group" {
   name       = "main"
-  subnet_ids = "${var.subnet_id}"
+  subnet_ids = "${var.subnets_id}"
 
   tags = {
     Name = "My DB subnet group"
