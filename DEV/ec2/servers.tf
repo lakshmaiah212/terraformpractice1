@@ -1,7 +1,7 @@
 
 resource "aws_instance" "webserver" {
   count = 1
-  ami           = "ami-04b9e92b5572fa0d1"
+  ami           = "ami-0b69ea66ff7391e80"
   instance_type = "t2.micro"
   key_name = "ubuntu.pem"
   subnet_id = "${element(var.subnets_id,count.index)}"
