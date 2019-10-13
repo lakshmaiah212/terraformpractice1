@@ -33,7 +33,7 @@ resource "aws_security_group" "mariadb-dev-sg" {
 
 resource "aws_db_parameter_group" "mariadb-pg" {
   name   = "mariadb-pg"
-  family = "mariadb10.1"
+  family = "mariadb10.3"
 
   parameter {
     name  = "max_allowed_packet"
