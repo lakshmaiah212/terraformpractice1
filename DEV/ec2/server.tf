@@ -5,6 +5,7 @@ resource "aws_instance" "web" {
   subnet_id = "${element(var.subnets_id, count.index)}"
   vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
   key_name = "endpoint"
+  associate_public_ip_address = true
 
   tags = {
     Name = "web"
