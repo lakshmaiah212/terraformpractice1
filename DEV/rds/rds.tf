@@ -11,5 +11,5 @@ resource "aws_db_instance" "dev-rds" {
   parameter_group_name = "${aws_db_parameter_group.mariadb-pg.name}"
   db_subnet_group_name = "${aws_db_subnet_group.mariadb-subnet-group.name}"
   identifier = "studentapp-rds-dev"
-  vpc_security_group_ids = ["${aws_db_security_group.mariadb-dev-sg.id}"]
+  vpc_security_group_ids = ["${aws_security_group.mariadb-dev-sg.id}"]
 }

@@ -11,7 +11,7 @@ resource "aws_db_subnet_group" "mariadb-subnet-group" {
 }
 
 
-resource "aws_db_security_group" "mariadb-dev-sg" {
+resource "aws_security_group" "mariadb-dev-sg" {
   name = "rds_sg"
   vpc_id = "${var.vpc_id}"
 
