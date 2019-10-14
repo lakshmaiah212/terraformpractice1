@@ -1,4 +1,6 @@
-output "vpc_id" {}
+output "vpc_id" {
+    value = "${aws_vpc.test_vpc.id}"
+}
 
 output "publicsubnets_id" {
   value = "${aws_subnet.publicsubnets.*.id}"
